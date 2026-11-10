@@ -124,27 +124,25 @@
     position: relative;
     isolation: isolate;
     overflow-x: hidden;
+    background-image:
+      radial-gradient(
+        ellipse 42rem 32rem at 0% 0%,
+        rgb(37 99 235 / 20%),
+        transparent 72%
+      ),
+      radial-gradient(
+        ellipse 42rem 32rem at 100% 100%,
+        rgb(139 92 246 / 17%),
+        transparent 72%
+      );
+    background-attachment: fixed;
   }
-  body::before,
-  body::after {
+  body::before {
     content: "";
     position: fixed;
     z-index: -1;
-    width: min(42rem, 80vw);
-    aspect-ratio: 1;
-    border-radius: 9999px;
-    filter: blur(72px);
+    inset: 0;
     pointer-events: none;
-  }
-  body::before {
-    top: -18rem;
-    left: -14rem;
-    background: radial-gradient(circle, rgb(37 99 235 / 26%), transparent 68%);
-  }
-  body::after {
-    right: -16rem;
-    bottom: -20rem;
-    background: radial-gradient(circle, rgb(139 92 246 / 22%), transparent 68%);
   }
   html {
     @apply font-sans;

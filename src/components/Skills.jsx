@@ -34,9 +34,15 @@ import {
   SiBetterauth,
   SiCss,
   SiExpress,
+  SiFigma,
+  SiFontawesome,
+  SiGit,
+  SiGithub,
+  SiGooglefonts,
   SiHeroui,
   SiHtml5,
   SiJavascript,
+  SiLinux,
   SiMongoose,
   SiMongodb,
   SiNextdotjs,
@@ -46,6 +52,7 @@ import {
   SiStripe,
   SiTailwindcss,
   SiTypescript,
+  SiVercel,
 } from "react-icons/si";
 import { useState } from "react";
 
@@ -116,6 +123,19 @@ const skillGroups = [
     ],
   },
   {
+    title: "Technology & Tools",
+    icon: CodeXml,
+    skills: [
+      { name: "Git", icon: SiGit, iconColor: "#f05032" },
+      { name: "GitHub", icon: SiGithub, iconColor: "#ffffff" },
+      { name: "Vercel", icon: SiVercel, iconColor: "#ffffff" },
+      { name: "Figma", icon: SiFigma, iconColor: "#f24e1e" },
+      { name: "Linux", icon: SiLinux, iconColor: "#fcc624" },
+      { name: "Google Fonts", icon: SiGooglefonts, iconColor: "#4285f4" },
+      { name: "Font Awesome", icon: SiFontawesome, iconColor: "#528dd7" },
+    ],
+  },
+  {
     title: "Auth & Security",
     icon: ShieldCheck,
     skills: [
@@ -129,16 +149,6 @@ const skillGroups = [
     ],
   },
   {
-    title: "Advanced Concepts",
-    icon: Sparkles,
-    skills: [
-      { name: "DOM vs BOM", icon: Binary },
-      { name: "AI Mindset Development", icon: Brain, badge: "NEW" },
-      { name: "AI Integration", icon: Sparkles, badge: "NEW" },
-      { name: "AI-Assisted Coding", icon: WandSparkles, badge: "NEW" },
-    ],
-  },
-  {
     title: "Payment & Testing",
     icon: CreditCard,
     skills: [
@@ -149,18 +159,18 @@ const skillGroups = [
         badge: "NEW",
       },
       { name: "SSLCommerz", icon: WalletCards, badge: "NEW" },
-      { name: "Introduction to Testing", icon: FlaskConical, badge: "NEW" },
+      { name: "Basic Testing", icon: FlaskConical, badge: "NEW" },
     ],
   },
 ];
 
-const skillCategories = ["All Skills", ...skillGroups.map(({ title }) => title)];
+const skillCategories = skillGroups.map(({ title }) => title);
 
 export default function Skills() {
-  const [activeCategory, setActiveCategory] = useState("All Skills");
+  const [activeCategory, setActiveCategory] = useState("Foundation");
   const shouldReduceMotion = useReducedMotion();
   const visibleSkills = skillGroups.flatMap(({ title, skills }) =>
-    activeCategory === "All Skills" || title === activeCategory
+    !activeCategory || title === activeCategory
       ? skills.map((skill) => ({ ...skill, category: title }))
       : [],
   );
@@ -169,13 +179,8 @@ export default function Skills() {
     <section
       id="skills"
       aria-labelledby="skills-heading"
-      className="relative isolate overflow-hidden px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28"
+      className="relative isolate overflow-hidden px-5 py-12 sm:px-8 lg:px-12"
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-40 top-1/4 -z-10 size-[30rem] rounded-full bg-blue-500/10 blur-[110px]"
-      />
-
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-8 max-w-2xl sm:mb-10">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
@@ -219,7 +224,7 @@ export default function Skills() {
           className="grid grid-cols-1 gap-3 min-[480px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-4"
         >
           {visibleSkills.map(
-            ({ name, icon: SkillIcon, iconColor, badge, category }, index) => (
+            ({ name, icon: SkillIcon, iconColor, category }, index) => (
               <motion.article
                 key={name}
                 layout
@@ -241,17 +246,6 @@ export default function Skills() {
                       style={iconColor ? { color: iconColor } : undefined}
                     />
                   </span>
-                  {badge && (
-                    <span
-                      className={`rounded-full border px-2 py-1 text-[0.625rem] font-semibold leading-none ${
-                        badge === "ADV"
-                          ? "border-violet-400/25 bg-violet-400/10 text-violet-200"
-                          : "border-emerald-400/25 bg-emerald-400/10 text-emerald-200"
-                      }`}
-                    >
-                      {badge}
-                    </span>
-                  )}
                 </div>
 
                 <h3 className="font-heading mt-4 text-base font-semibold leading-snug text-white sm:text-lg">

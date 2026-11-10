@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Globe, Server } from "lucide-react";
+import { SiGithub } from "react-icons/si";
 import { Suspense } from "react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -79,6 +80,7 @@ async function ProjectDetailsContent({ params }) {
                     rel="noopener noreferrer"
                     className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-primary px-5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
+                    <Globe aria-hidden="true" className="size-4" />
                     Live project
                     <ExternalLink aria-hidden="true" className="size-4" />
                   </a>
@@ -90,6 +92,7 @@ async function ProjectDetailsContent({ params }) {
                     rel="noopener noreferrer"
                     className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.05] px-5 text-sm font-medium text-slate-200 transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
+                    <SiGithub aria-hidden="true" className="size-4" />
                     {project.githubServerUrl
                       ? "GitHub client repository"
                       : "GitHub repository"}
@@ -103,6 +106,7 @@ async function ProjectDetailsContent({ params }) {
                     rel="noopener noreferrer"
                     className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.05] px-5 text-sm font-medium text-slate-200 transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
+                    <Server aria-hidden="true" className="size-4" />
                     GitHub server repository
                     <ExternalLink aria-hidden="true" className="size-4" />
                   </a>

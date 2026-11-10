@@ -43,18 +43,13 @@ export default function Education() {
     <section
       id="education"
       aria-labelledby="education-heading"
-      className="relative isolate overflow-hidden px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28"
+      className="relative isolate overflow-hidden px-5 py-12 sm:px-8 lg:px-12"
     >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 opacity-20 [background-image:linear-gradient(to_right,rgba(148,163,184,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.12)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]"
       />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-40 top-1/4 -z-10 size-[28rem] rounded-full bg-gradient-to-br from-blue-500/10 to-violet-500/10 blur-[110px]"
-      />
-
-      <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[0.7fr_1.7fr] lg:items-center lg:gap-14">
+      <div className="mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-[0.7fr_1.7fr] lg:items-center lg:gap-10">
         <div className="max-w-xl">
           <p className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-primary sm:text-sm">
             <GraduationCap aria-hidden="true" className="size-4" />

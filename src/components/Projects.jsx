@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, ExternalLink, FolderKanban } from "lucide-react";
+import {
+  ArrowUpRight,
+  ExternalLink,
+  FolderKanban,
+  Globe,
+  Server,
+} from "lucide-react";
+import { SiGithub } from "react-icons/si";
 import projects from "../../data/projects";
 
 export default function Projects() {
@@ -8,15 +15,10 @@ export default function Projects() {
     <section
       id="projects"
       aria-labelledby="projects-heading"
-      className="relative isolate overflow-hidden bg-background px-5 pb-12 pt-20 sm:px-8 sm:pb-14 sm:pt-24 lg:px-12 lg:pb-16 lg:pt-28"
+      className="relative isolate overflow-hidden px-5 py-12 sm:px-8 lg:px-12"
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-40 top-1/4 -z-10 size-[30rem] rounded-full bg-blue-500/10 blur-[110px]"
-      />
-
       <div className="mx-auto w-full max-w-7xl">
-        <div className="mb-10 max-w-2xl sm:mb-12">
+        <div className="mb-4 max-w-2xl sm:mb-5">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             Selected work
           </p>
@@ -91,6 +93,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.05] px-4 text-sm font-medium text-slate-200 transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
+                      <Globe aria-hidden="true" className="size-4" />
                       Live
                       <ExternalLink aria-hidden="true" className="size-4" />
                     </a>
@@ -102,6 +105,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.05] px-4 text-sm font-medium text-slate-200 transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
+                      <SiGithub aria-hidden="true" className="size-4" />
                       {project.githubServerUrl ? "GitHub client" : "GitHub"}
                       <ExternalLink aria-hidden="true" className="size-4" />
                     </a>
@@ -113,6 +117,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.05] px-4 text-sm font-medium text-slate-200 transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
+                      <Server aria-hidden="true" className="size-4" />
                       GitHub server
                       <ExternalLink aria-hidden="true" className="size-4" />
                     </a>

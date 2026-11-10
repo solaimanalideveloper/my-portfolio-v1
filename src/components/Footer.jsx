@@ -1,9 +1,22 @@
 import Link from "next/link";
-import { Flower2 } from "lucide-react";
+import { ArrowUpRight, Flower2 } from "lucide-react";
+
+const footerLinks = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Education", href: "#education" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
 
 export default function Footer({ homePath = "" }) {
   return (
-    <footer className="relative isolate overflow-hidden bg-[#141920] bg-[linear-gradient(rgba(11,18,32,0.5),rgba(11,18,32,0.78)),url('/22757856.jpg')] bg-cover bg-center px-4 pb-4 pt-5 sm:px-6 sm:pt-8 lg:px-8">
+    <footer className="relative isolate overflow-hidden bg-[#0b1220]/80 px-4 pb-4 pt-5 sm:px-6 sm:pt-8 lg:px-8">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-48 left-1/2 -z-10 size-[30rem] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[110px]"
+      />
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-4 grid grid-cols-2 items-end gap-3 px-1 text-xs text-slate-400 sm:mb-5 sm:grid-cols-[1fr_auto_1fr] sm:px-2 sm:text-sm">
           <p className="max-w-40">Thanks for visiting my portfolio.</p>
@@ -29,40 +42,58 @@ export default function Footer({ homePath = "" }) {
           <p className="justify-self-end text-right">Let&apos;s stay connected</p>
         </div>
 
-        <div className="relative isolate flex min-h-[16rem] flex-col overflow-hidden rounded-[1.5rem] border border-white/15 bg-[#2f80ff]/20 px-6 pb-4 pt-6 backdrop-blur-[2px] sm:min-h-[19rem] sm:rounded-[2rem] sm:px-10 sm:pt-7 lg:min-h-[21rem] lg:px-14">
+        <div className="relative isolate overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.035] px-6 pb-8 pt-6 shadow-2xl shadow-black/20 sm:rounded-[2rem] sm:px-10 sm:pb-10 sm:pt-8 lg:px-14">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(47,128,255,0)_8%,rgba(11,18,32,0.25)_46%,#141920_100%)]"
-          />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 -z-10 opacity-30 [background-image:radial-gradient(rgba(11,18,32,0.55)_0.7px,transparent_0.7px)] [background-size:4px_4px] [mask-image:linear-gradient(to_bottom,transparent_8%,black_48%,black_78%,transparent_100%)]"
+            className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-blue-500/[0.08] via-transparent to-violet-500/[0.08]"
           />
 
-          <nav
-            aria-label="Footer navigation"
-            className="mx-auto flex w-full max-w-4xl flex-col items-start gap-5 text-sm text-white sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-8 sm:gap-y-4 sm:text-base"
-          >
+          <div className="flex flex-col gap-6 border-b border-white/10 pb-6 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <p className="font-heading text-xl font-semibold tracking-tight text-white">
+                &lt; SOLAIMAN /&gt;
+              </p>
+              <p className="mt-2 text-sm text-slate-400">
+                Junior Web Developer
+              </p>
+            </div>
+            <nav
+              aria-label="Footer navigation"
+              className="flex max-w-2xl flex-wrap gap-2"
+            >
+              {footerLinks.map(({ label, href }) => (
+                <Link
+                  key={href}
+                  href={`${homePath}${href}`}
+                  className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-slate-300 transition hover:border-primary/30 hover:bg-white/[0.08] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-xs text-slate-500">
+              © SOLAIMAN. All rights reserved.
+            </p>
             <Link
               href={`${homePath}#home`}
-              className="rounded-sm transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              className="inline-flex items-center gap-2 text-sm text-slate-300 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
             >
-              ↑ Back to top
+              Back to top
+              <ArrowUpRight aria-hidden="true" className="size-4" />
             </Link>
-          </nav>
+          </div>
 
-          <div className="mt-auto w-full overflow-hidden">
+          <div className="mt-8 w-full overflow-hidden">
             <h2
               aria-label="Solaiman"
-              className="font-heading -mb-[0.12em] w-full whitespace-nowrap text-center text-[clamp(2rem,12vw,14rem)] font-bold leading-[0.78] tracking-[-0.085em] text-white/90 drop-shadow-lg"
+              className="font-heading w-full whitespace-nowrap text-center text-[clamp(2rem,12vw,14rem)] font-bold leading-[0.9] tracking-[-0.085em] text-white/90 drop-shadow-lg"
             >
               SOLAIMAN
             </h2>
           </div>
-        </div>
-
-        <div className="flex flex-col gap-2 px-1 py-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-2 sm:py-5 sm:text-sm">
-          <p>© SOLAIMAN. All rights reserved.</p>
         </div>
       </div>
     </footer>

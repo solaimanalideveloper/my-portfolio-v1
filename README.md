@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Solaiman Ali: Developer Portfolio
 
-## Getting Started
+A modern, responsive personal portfolio website for **Solaiman Ali**, an aspiring AI-powered full-stack web engineer. It presents my background, skills, education, and hands-on projects in a clean single-page layout.
 
-First, run the development server:
+**Live site:** https://solaimanalideveloper.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Hero section with a freelance-availability badge and downloadable resume
+- About section covering my learning journey and interests
+- Filterable skills grid by category: Foundation, Frontend, Backend, Database, UI Libraries, Auth & Security, Advanced Concepts, Payment & Testing
+- Education timeline
+- Project showcase with detail pages, live demos, and GitHub links
+- Contact form and social links (GitHub, LinkedIn, Facebook)
+- Smooth anchor navigation and responsive design
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Featured Projects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Project | Description | Live | Code |
+|---|---|---|---|
+| **Bazar Dor** | A Bengali price-tracker app for daily market prices | [Live](https://ph-assignment-7-lovat.vercel.app) | [GitHub](https://github.com/solaimanalideveloper/PH-Assignment-7) |
+| **BookNook** | A full-stack neighborhood book-sharing platform | [Live](https://book-nook-sigma-ten.vercel.app) | [Client](https://github.com/solaimanalideveloper/book-nook) · [Server](https://github.com/solaimanalideveloper/book-nook-server-side) |
+| **FitLog** | A workout library and gym companion app | [Live](https://ph-assignment-6-tau.vercel.app/) | [GitHub](https://github.com/solaimanalideveloper/PH-Assignment-6) |
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** Next.js, React
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Connect With Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- GitHub: [solaimanalideveloper](https://github.com/solaimanalideveloper)
+- LinkedIn: [md-solaiman-ali](https://www.linkedin.com/in/md-solaiman-ali)
+- Facebook: [md.solaiman.ali.161285](https://www.facebook.com/md.solaiman.ali.161285)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Thanks for visiting my portfolio!

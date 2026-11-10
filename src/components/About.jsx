@@ -32,14 +32,9 @@ export default function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="relative isolate overflow-hidden px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28"
+      className="relative isolate overflow-hidden px-5 py-12 sm:px-8 lg:px-12"
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-40 top-1/4 -z-10 size-[28rem] rounded-full bg-violet-500/10 blur-[110px]"
-      />
-
-      <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+      <div className="mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
         <div className="max-w-xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             Get to know me
@@ -56,9 +51,8 @@ export default function About() {
             building modern, responsive, and user-friendly web applications.
             <br />
             <br />
-            Currently, I am learning JavaScript, TypeScript, React.js, Next.js,
-            Tailwind CSS, REST APIs, and backend development, with a goal of
-            becoming a skilled AI-Powered Full Stack Software Engineer.
+            Currently, I am learning AI (LLM) Integration, with a
+            goal of becoming a skilled AI-Powered Full Stack Software Engineer.
           </p>
         </div>
 

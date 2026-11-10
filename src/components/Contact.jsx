@@ -1,11 +1,32 @@
+import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import { SiGmail } from "react-icons/si";
+
+const socialLinks = [
+  {
+    name: "Gmail",
+    href: "mailto:solaimanalideveloper@gmail.com",
+    icon: SiGmail,
+  },
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/8801602101588",
+    icon: FaWhatsapp,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/md-solaiman-ali",
+    icon: FaLinkedinIn,
+  },
+];
+
 export default function Contact() {
   return (
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="relative isolate overflow-hidden bg-background px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-14 lg:px-8 lg:pb-24 lg:pt-16"
+      className="relative isolate overflow-hidden px-4 py-12 sm:px-6 lg:px-8"
     >
-      <div className="mx-auto grid w-full max-w-6xl gap-10 md:grid-cols-[0.85fr_1.15fr] md:items-start md:gap-10 lg:gap-16">
+      <div className="mx-auto grid w-full max-w-6xl gap-6 md:grid-cols-[0.85fr_1.15fr] md:items-start md:gap-8 lg:gap-10">
         <div className="text-slate-100">
           <h2
             id="contact-heading"
@@ -14,30 +35,48 @@ export default function Contact() {
             Get in touch
           </h2>
 
-          <div className="mt-8 space-y-6 sm:mt-10">
+          <div className="mt-6 space-y-4 sm:mt-8">
             <div>
               <p className="text-sm text-slate-400">Email</p>
-              <p className="mt-1 break-all text-base font-medium sm:text-lg">
-                TODO: Add your email address
-              </p>
+              <a
+                href="mailto:solaimanalideveloper@gmail.com"
+                className="mt-1 inline-block break-all text-base font-medium transition hover:text-primary sm:text-lg"
+              >
+                solaimanalideveloper@gmail.com
+              </a>
             </div>
             <div>
               <p className="text-sm text-slate-400">Role</p>
               <p className="mt-1 text-base font-medium sm:text-lg">
-                TODO: Add your professional designation
+                Junior Web Developer
               </p>
             </div>
             <div>
               <p className="text-sm text-slate-400">Social profiles</p>
-              <p className="mt-1 text-sm text-slate-300">
-                TODO: Add links to your available profiles
-              </p>
+              <ul className="mt-3 flex flex-wrap gap-3">
+                {socialLinks.map(({ name, href, icon: Icon }) => (
+                  <li key={name}>
+                    <a
+                      href={href}
+                      target={name === "Gmail" ? undefined : "_blank"}
+                      rel={
+                        name === "Gmail" ? undefined : "noopener noreferrer"
+                      }
+                      aria-label={`${name}${name === "Gmail" ? "" : " profile (opens in a new tab)"}`}
+                      className="inline-flex min-h-10 items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-4 text-sm font-medium text-slate-200 transition hover:border-primary/30 hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    >
+                      <Icon aria-hidden="true" className="size-4" />
+                      {name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
 
         <div>
-          <form className="grid gap-x-4 gap-y-5 sm:grid-cols-2">
+          <form className="grid gap-x-4 gap-y-4 sm:grid-cols-2">
             <div className="grid gap-2">
               <label
                 htmlFor="contact-name"
