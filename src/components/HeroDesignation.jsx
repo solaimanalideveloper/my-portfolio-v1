@@ -29,7 +29,7 @@ export default function HeroDesignation() {
     <div
       aria-live="polite"
       aria-atomic="true"
-      className="font-heading mt-3 min-h-16 text-xl font-semibold text-primary sm:min-h-8 sm:text-2xl"
+      className="font-heading mt-3 min-h-8 text-xl font-semibold text-primary sm:text-2xl"
     >
       <AnimatePresence mode="wait" initial={false}>
         <motion.p

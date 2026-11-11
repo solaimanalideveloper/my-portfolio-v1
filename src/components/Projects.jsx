@@ -26,10 +26,12 @@ export default function Projects() {
             id="projects-heading"
             className="font-heading mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl"
           >
-          Projects
+            Projects
           </h2>
           <p className="mt-4 text-base leading-7 text-slate-400">
-            TODO: Add a short introduction to your projects.
+            A selection of full-stack and frontend projects I ve built to solve
+            real-world problems, with a focus on clean UI, solid performance,
+            and practical features.
           </p>
         </div>
 

@@ -19,7 +19,7 @@ export default function Footer({ homePath = "" }) {
       />
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-4 grid grid-cols-2 items-end gap-3 px-1 text-xs text-slate-400 sm:mb-5 sm:grid-cols-[1fr_auto_1fr] sm:px-2 sm:text-sm">
-          <p className="max-w-40">Thanks for visiting my portfolio.</p>
+          <p className="whitespace-nowrap">Thanks for visiting my portfolio.</p>
           <div
             aria-hidden="true"
             className="col-span-2 row-start-1 flex h-16 items-end justify-center gap-2 text-blue-500 sm:col-span-1 sm:row-auto sm:h-20 sm:gap-3"

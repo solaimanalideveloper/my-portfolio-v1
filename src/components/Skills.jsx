@@ -149,7 +149,7 @@ const skillGroups = [
     ],
   },
   {
-    title: "Payment & Testing",
+    title: "Payment",
     icon: CreditCard,
     skills: [
       {
@@ -159,6 +159,12 @@ const skillGroups = [
         badge: "NEW",
       },
       { name: "SSLCommerz", icon: WalletCards, badge: "NEW" },
+    ],
+  },
+  {
+    title: "Testing",
+    icon: FlaskConical,
+    skills: [
       { name: "Basic Testing", icon: FlaskConical, badge: "NEW" },
     ],
   },
