@@ -138,7 +138,8 @@ export default function Contact() {
               type="text"
               name="website"
               tabIndex={-1}
-              autoComplete="off"
+              autoComplete="new-password"
+              readOnly
               aria-hidden="true"
               className="sr-only"
             />
@@ -206,6 +207,7 @@ export default function Contact() {
                 name="subject"
                 type="text"
                 placeholder="e.g. Project inquiry"
+                required
                 className="min-h-12 rounded-xl border border-white/10 bg-white/[0.07] px-4 text-sm text-white shadow-sm shadow-black/10 transition-colors placeholder:text-slate-400/80 hover:border-white/20 focus:border-white/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               />
             </div>
