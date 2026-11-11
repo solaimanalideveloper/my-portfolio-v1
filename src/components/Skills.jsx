@@ -30,6 +30,7 @@ import {
   Workflow,
 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
+import Reveal from "@/components/Reveal";
 import {
   SiBetterauth,
   SiCss,
@@ -188,7 +189,7 @@ export default function Skills() {
       className="relative isolate overflow-hidden px-5 py-12 sm:px-8 lg:px-12"
     >
       <div className="mx-auto w-full max-w-7xl">
-        <div className="mb-8 max-w-2xl sm:mb-10">
+        <Reveal className="mb-8 max-w-2xl sm:mb-10">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             Skills &amp; capabilities
           </p>
@@ -202,7 +203,7 @@ export default function Skills() {
             Technologies and tools I use to turn ideas into working
             applications.
           </p>
-        </div>
+        </Reveal>
 
         <div
           aria-label="Filter skills by category"

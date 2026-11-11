@@ -8,6 +8,7 @@ import {
   Server,
 } from "lucide-react";
 import { SiGithub } from "react-icons/si";
+import Reveal from "@/components/Reveal";
 import projects from "../../data/projects";
 
 export default function Projects() {
@@ -18,7 +19,7 @@ export default function Projects() {
       className="relative isolate overflow-hidden px-5 py-12 sm:px-8 lg:px-12"
     >
       <div className="mx-auto w-full max-w-7xl">
-        <div className="mb-4 max-w-2xl sm:mb-5">
+        <Reveal className="mb-4 max-w-2xl sm:mb-5">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             Selected work
           </p>
@@ -33,14 +34,16 @@ export default function Projects() {
             real-world problems, with a focus on clean UI, solid performance,
             and practical features.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project) => (
-            <article
+          {projects.map((project, index) => (
+            <Reveal
               key={project.id}
-              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#151d2b]/80 shadow-xl shadow-black/10 transition duration-200 hover:-translate-y-1 hover:border-primary/30 hover:bg-[#192438]/90"
+              className="h-full"
+              delay={(index % 3) * 0.1}
             >
+            <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#151d2b]/80 shadow-xl shadow-black/10 transition duration-200 hover:-translate-y-1 hover:border-primary/30 hover:bg-[#192438]/90">
               <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden border-b border-white/10 bg-[#0b1220]/70">
                 {project.image ? (
                   <Image
@@ -127,6 +130,7 @@ export default function Projects() {
                 </div>
               </div>
             </article>
+            </Reveal>
           ))}
         </div>
       </div>

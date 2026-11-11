@@ -1,4 +1,5 @@
 import { Heart, Lightbulb, Sparkles, Terminal } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const aboutTopics = [
   {
@@ -35,7 +36,7 @@ export default function About() {
       className="relative isolate overflow-hidden px-5 py-12 sm:px-8 lg:px-12"
     >
       <div className="mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
-        <div className="max-w-xl">
+        <Reveal className="max-w-xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             Get to know me
           </p>
@@ -54,24 +55,27 @@ export default function About() {
             Currently, I am learning AI (LLM) Integration, with a
             goal of becoming a skilled AI-Powered Full Stack Software Engineer.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          {aboutTopics.map(({ title, description, icon: Icon }) => (
-            <article
+          {aboutTopics.map(({ title, description, icon: Icon }, index) => (
+            <Reveal
               key={title}
-              className="group rounded-2xl border border-white/10 bg-white/[0.035] p-5 transition duration-200 hover:-translate-y-1 hover:border-primary/30 hover:bg-white/[0.06] sm:p-6"
+              className="h-full"
+              delay={(index % 2) * 0.1}
             >
-              <span className="inline-flex size-11 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
-                <Icon aria-hidden="true" className="size-5" />
-              </span>
-              <h3 className="font-heading mt-5 text-lg font-semibold text-white">
-                {title}
-              </h3>
-              <p className="mt-2 text-sm leading-7 text-slate-400">
-                {description}
-              </p>
-            </article>
+              <article className="group h-full rounded-2xl border border-white/10 bg-white/[0.035] p-5 transition duration-200 hover:-translate-y-1 hover:border-primary/30 hover:bg-white/[0.06] sm:p-6">
+                <span className="inline-flex size-11 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
+                  <Icon aria-hidden="true" className="size-5" />
+                </span>
+                <h3 className="font-heading mt-5 text-lg font-semibold text-white">
+                  {title}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-slate-400">
+                  {description}
+                </p>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

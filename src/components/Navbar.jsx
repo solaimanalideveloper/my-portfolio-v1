@@ -2,6 +2,7 @@
 
 import {
   BriefcaseBusiness,
+  Award,
   CodeXml,
   FolderKanban,
   GraduationCap,
@@ -27,6 +28,11 @@ const sections = [
     label: "Projects",
     href: "#projects",
     icon: <FolderKanban aria-hidden="true" />,
+  },
+  {
+    label: "Certificates",
+    href: "#certificates",
+    icon: <Award aria-hidden="true" />,
   },
   { label: "Contact", href: "#contact", icon: <Mail aria-hidden="true" /> },
 ];
@@ -87,7 +93,7 @@ export default function Navbar({ homePath = "" }) {
         >
           <nav
             aria-label="Mobile navigation"
-            className="glass flex flex-col gap-1 p-3"
+            className="glass flex flex-col gap-1 border-white/20 bg-[#111b2e]/95 p-3"
           >
             {sections.map((section) => (
               <Link

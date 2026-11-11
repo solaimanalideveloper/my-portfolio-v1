@@ -8,6 +8,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
+import Reveal from "@/components/Reveal";
 
 const educationCards = [
   {
@@ -51,20 +52,22 @@ export default function Education() {
       />
       <div className="mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-[0.7fr_1.7fr] lg:items-center lg:gap-10">
         <div className="max-w-xl">
-          <p className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-primary sm:text-sm">
-            <GraduationCap aria-hidden="true" className="size-4" />
-            Academic qualifications
-          </p>
-          <h2
-            id="education-heading"
-            className="font-heading mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl"
-          >
-            Education &amp; Background
-          </h2>
-          <p className="mt-5 text-base leading-7 text-slate-300">
-            Science graduate (Dakhil) with a 4.72 CGPA, currently pursuing a
-            Diploma in Engineering (CST).
-          </p>
+          <Reveal>
+            <p className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-primary sm:text-sm">
+              <GraduationCap aria-hidden="true" className="size-4" />
+              Academic qualifications
+            </p>
+            <h2
+              id="education-heading"
+              className="font-heading mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl"
+            >
+              Education &amp; Background
+            </h2>
+            <p className="mt-5 text-base leading-7 text-slate-300">
+              Science graduate (Dakhil) with a 4.72 CGPA, currently pursuing a
+              Diploma in Engineering (CST).
+            </p>
+          </Reveal>
 
           <motion.aside
             initial={shouldReduceMotion ? false : { opacity: 0, x: -18 }}

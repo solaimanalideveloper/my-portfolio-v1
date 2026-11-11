@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { useEffect, useRef, useState } from "react";
+import Reveal from "@/components/Reveal";
 
 const socialLinks = [
   {
@@ -78,7 +79,7 @@ export default function Contact() {
       className="relative isolate overflow-hidden px-4 py-12 sm:px-6 lg:px-8"
     >
       <div className="mx-auto grid w-full max-w-6xl gap-6 md:grid-cols-[0.85fr_1.15fr] md:items-start md:gap-8 lg:gap-10">
-        <div className="text-slate-100">
+        <Reveal className="text-slate-100">
           <h2
             id="contact-heading"
             className="font-heading text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
@@ -124,9 +125,9 @@ export default function Contact() {
               </ul>
             </div>
           </div>
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal>
           <form
             ref={formRef}
             onSubmit={handleSubmit}
@@ -158,7 +159,6 @@ export default function Contact() {
                 className="min-h-12 rounded-xl border border-white/10 bg-white/[0.07] px-4 text-sm text-white shadow-sm shadow-black/10 transition-colors placeholder:text-slate-400/80 hover:border-white/20 focus:border-white/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               />
             </div>
-
             <div className="grid gap-2">
               <label
                 htmlFor="contact-email"
@@ -249,7 +249,7 @@ export default function Contact() {
               )}
             </div>
           </form>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
