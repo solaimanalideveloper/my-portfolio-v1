@@ -113,7 +113,7 @@ export default function Hero() {
                 className="absolute inset-x-8 bottom-0 h-2/3 rounded-full bg-linear-to-t from-blue-500/15 to-transparent blur-2xl"
               />
               <Image
-                src="/hero.png"
+                src="/hero.png?v=b1b032d6a987"
                 alt="Professional portrait of the portfolio owner seated in a suit"
                 width={577}
                 height={432}
