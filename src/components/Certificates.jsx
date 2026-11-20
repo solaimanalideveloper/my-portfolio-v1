@@ -13,6 +13,17 @@ const certificates = [
     certificateUrl:
       "https://drive.google.com/file/d/10SXBZvRbjeRrXbxdN8crt83uvXdeTiZC/view?usp=sharing",
   },
+  {
+    title: "Basic First Aid Training",
+    issuer: "Bangladesh Red Crescent Society",
+    description:
+      "Successfully completed practical basic first aid training at Kurigram Polytechnic Institute in April 2026, covering CPR, wounds, burns, bleeding, and fractures.",
+    image: "/RED%20CRIESCENT%20CERTIFICATE.jpeg?v=2",
+    imageAlt: "Basic First Aid Training certificate",
+    imageFit: "cover",
+    certificateUrl:
+      "https://drive.google.com/file/d/1zhrRdcft-jeOjP8iUa3T42yT7hPrlSxo/view?usp=sharing",
+  },
 ];
 
 export default function Certificates() {
@@ -37,7 +48,7 @@ export default function Certificates() {
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {certificates.map(
-            ({ title, issuer, description, image, imageAlt, certificateUrl }, index) => (
+            ({ title, issuer, description, image, imageAlt, imageFit, certificateUrl }, index) => (
               <Reveal
                 key={title}
                 className="h-full"
@@ -50,7 +61,7 @@ export default function Certificates() {
                   alt={imageAlt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                  className="object-contain transition-transform duration-500 group-hover:scale-105"
+                  className={`${imageFit === "cover" ? "object-cover" : "object-contain"} object-center transition-transform duration-500 group-hover:scale-105`}
                 />
               </div>
 
@@ -59,19 +70,21 @@ export default function Certificates() {
                   {title}
                 </h3>
                 <p className="mt-2 text-sm font-medium text-primary">{issuer}</p>
-                <p className="mt-3 text-sm leading-6 text-slate-400">
+                <p className="mt-3 text-base leading-7 text-slate-400">
                   {description}
                 </p>
-                <a
-                  href={certificateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex min-h-11 w-fit items-center gap-2 rounded-xl bg-primary px-4 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                >
-                  <Award aria-hidden="true" className="size-4" />
-                  View certificate
-                  <ExternalLink aria-hidden="true" className="size-4" />
-                </a>
+                <div className="mt-auto pt-5">
+                  <a
+                    href={certificateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 w-fit shrink-0 items-center gap-2 whitespace-nowrap rounded-xl bg-primary px-4 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  >
+                    <Award aria-hidden="true" className="size-4" />
+                    View certificate
+                    <ExternalLink aria-hidden="true" className="size-4" />
+                  </a>
+                </div>
               </div>
             </article>
               </Reveal>

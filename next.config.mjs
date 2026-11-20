@@ -5,6 +5,10 @@ const nextConfig = {
     localPatterns: [
       { pathname: "/**", search: "" },
       { pathname: "/hero.png" },
+      {
+        pathname: "/RED%20CRIESCENT%20CERTIFICATE.jpeg",
+        search: "?v=2",
+      },
     ],
   },
   experimental: {
